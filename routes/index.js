@@ -18,8 +18,6 @@ router.post('/', function(req, res, next) {
   
   var phoneNumber = sender.replace("whatsapp:", "");
   
-  console.log(phoneNumber)
-  
   users.findOne({phoneNumber: phoneNumber}).then((doc) => {
     
     if (doc) {
@@ -135,8 +133,6 @@ router.post('/', function(req, res, next) {
   
   function chatFunction(user, senderMessage) {
 
-
-
       // get messages of initialized conversation
       var myTimer = setInterval(function(){ 
 
@@ -162,15 +158,17 @@ router.post('/', function(req, res, next) {
 
           if (res.messages['0'].text != undefined) {
             
-            console.log(res.messages['0'].text.text['0']);
+            var message = res.messages['0'].text.text['0'];
             
-                    client.messages
-          .create({
+            // message transmission optimization
+            
+            
+            
+            client.messages.create({
              from: 'whatsapp:+14155238886',
              body: res.messages['0'].text.text['0'],
              to: 'whatsapp:' + user.phoneNumber
-           })
-          .then(message => console.log(message.sid));
+            }).then(message => console.log(message.sid));
 
           } else {
             
