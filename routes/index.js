@@ -162,7 +162,12 @@ router.post('/', function(req, res, next) {
             
             // message transmission optimization
             
+            if (message.indexOf('<a href="') >= 0) {
+              message = message.replace('<a href="/g', "");
+              message = message.replace(/".*?<\/a>/g, '');
+            }
             
+            console.log(message);
             
             client.messages.create({
              from: 'whatsapp:+14155238886',
