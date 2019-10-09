@@ -166,7 +166,7 @@ router.post('/', function(req, res, next) {
             
             client.messages.create({
              from: 'whatsapp:+14155238886',
-             body: res.messages['0'].text.text['0'],
+             body: message,
              to: 'whatsapp:' + user.phoneNumber
             }).then(message => console.log(message.sid));
 
