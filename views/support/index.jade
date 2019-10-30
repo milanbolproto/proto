@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarColor01' aria-controls='navbarColor01' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarColor01.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='#')
+            | Verbinding maken met WhatsApp
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='support') Support
+        li.nav-item
+          a.nav-link(href='#') Pricing
+        li.nav-item
+          a.nav-link(href='#') About
+          
+  .content
+    .container
+              
+      .row
+        .col-12
+          h2 Waarom WhatsApp
+          p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+
+      .row
+        .col-12
+          form
+            fieldset
+              h3 Maak verbinding met WhatsApp
+              p To begin testing, connect to your sandbox by sending a <b>WhatsApp message</b> from your device to <b>+1 415 523 8886</b> with code <code>join progress-began</code>.
+
+              .message-status
+                span Waiting for your message
+                  i.fas.fa-spinner.fa-spin
+              .form-group.row
+                label.col-sm-3.col-form-label(for='staticEmail') Telefoonnummer
+                .col-sm-9
+                  input#staticEmail.form-control-plaintext(type='text' readonly='' value='+31634948646')
+              .form-group
+                label(for='exampleInputEmail1') Wijzig je telefoonnummer om berichten te ontvangen via WhatsApp.
+                input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Telefoonnummer...')
+                small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+              button.btn.btn-primary(type='submit') Submit

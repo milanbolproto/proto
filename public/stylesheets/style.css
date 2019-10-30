@@ -1,8 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+span i {
+  margin: 0px 5px;
+}
+
+p i {
+  margin: 0px 5px;
+}
+
+i.fa-whatsapp {
+  color: #40C351;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+.navbar-toggler {
+  border: none;
+}
+
+.bg-primary {
+    background-color: #0000a4 !important;
+}
+
+.row {
+  margin-top: 25px;
+}
+
+.row:first-child {
+  margin-top: 0px;
+}
+
+.navbar {
+  min-height: 50px;
+}
+
+.content {
+  padding: 50px 0px;
+}
+
+.message-status {
+  margin-bottom: 10px;
+  background-color: #f6f6f6;
+  padding: 25px;
+}
+
+.btn-primary {
+    background-color: #00f;
+    border-color: #00f;
 }
